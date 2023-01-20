@@ -19,7 +19,7 @@ author:
 #     orcid: 0000-0000-0000-0000
 #     email: sm@example.org
 #     url: https://example.org/
-  - name: Eliza Dealloc
+  # - name: Eliza Dealloc
   #   affiliations:
   #     - Another Affiliation
 abstract: |

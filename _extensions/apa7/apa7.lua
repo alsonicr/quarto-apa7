@@ -2,11 +2,11 @@
 
 Meta = function(meta)
   local byAuthor = meta['by-author']
-  local apaAuthorPfx = '\\author'
+  local apaAuthorPfx = pandoc.RawInline('latex','\\author')
   if byAuthor ~= nil then
 
     if #byAuthor >=2 then
-      apaAuthorPfx = '\\authorsnames'
+      apaAuthorPfx = pandoc.RawInline('latex', '\\authorsnames')
     end
 
     meta['apa-author-prefix'] = apaAuthorPfx
