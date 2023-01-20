@@ -5,3 +5,5 @@ template.synctex.gz
 template.aux
 template.fdb_latexmk
 template.fls
+template_files
+/.luarc.json
