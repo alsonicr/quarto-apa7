@@ -5,12 +5,9 @@ Meta = function(meta)
   local apaAuthorPfx = '\\author'
   if byAuthor ~= nil then
 
-    if #byAuthor == 2 then
-      apaAuthorPfx = '\\twoauthors'
-    elseif #byAuthor == 3 then
-      apaAuthorPfx = "\\threeauthors"
+    if #byAuthor >=2 then
+      apaAuthorPfx = '\\authorsnames'
     end
-    -- TODO: 4, 5, 6
 
     meta['apa-author-prefix'] = apaAuthorPfx
     return meta --< This was missing! without it, Pandoc will just use the unmodified `meta` value

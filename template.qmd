@@ -1,5 +1,6 @@
 ---
 title: Apa7 Template
+titleshort : hello title
 format:
   apa7-pdf:
     keep-tex: true  
