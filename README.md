@@ -1,5 +1,5 @@
 
-# <%= title %>
+# Quarto APA7 template
 
 ## Creating a New Article
 
