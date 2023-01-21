@@ -8,4 +8,4 @@ template.fls
 template_files
 /.luarc.json
 pdflatex*
-template.syntex*
+template.syntex(busy)
