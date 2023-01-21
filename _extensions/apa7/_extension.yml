@@ -12,7 +12,9 @@ contributes:
       documentclass: apa7
       include-in-header: header.tex
       template-partials:
-        - partials/title.tex
+        - "partials/before-body.tex"
+        - "partials/title.tex"
+        
       
     # html:
     #   css: styles.css

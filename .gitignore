@@ -7,3 +7,5 @@ template.fdb_latexmk
 template.fls
 template_files
 /.luarc.json
+pdflatex*
+template.syntex*
