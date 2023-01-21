@@ -13,3 +13,5 @@ Meta = function(meta)
     return meta --< This was missing! without it, Pandoc will just use the unmodified `meta` value
   end
 end
+
+
