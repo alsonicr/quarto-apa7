@@ -6,11 +6,12 @@ format:
   apa7-pdf:
     latex-max-runs: 20
     keep-tex: true  
-    classoption: man # Or man for journals
+    classoption: jou # Or man for journals
+    toc: true
   apa7-html: default
-  apa7-docx:
-    reference-doc: custom-reference-doc.docx
-    df-print: tibble
+  # apa7-docx:
+  #   reference-doc: custom-reference-doc.docx
+  #   df-print: tibble
 author:
   - name:  John Junior Indeed
     affiliations:
@@ -42,7 +43,7 @@ bibliography: bibliography.bib
 
 
 
-# Section 
+<!-- # Section 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. 
 
 ## Subsection 
@@ -56,7 +57,12 @@ Donec iaculis nec dui ut malesuada. Maecenas sodales diam eros, quis faucibus au
 Proin mi diam, pulvinar a mauris semper, semper interdum leo. Pellentesque sapien est, dapibus sed nunc sit amet, ullamcorper pretium lectus. Quisque quam quam, pretium eu luctus vitae, scelerisque et lectus. Suspendisse sodales lacinia purus bibendum consectetur. Mauris porttitor nec nulla vitae maximus. Praesent sit amet hendrerit magna. Aliquam malesuada diam eu nulla vulputate tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non odio sit amet orci varius vehicula. Cras eget sapien nisl. Curabitur commodo, dui eu rhoncus vestibulum, nunc tellus mollis velit, id pretium diam purus non magna. Cras sed sapien gravida, dictum neque ultrices, faucibus dui. Mauris leo magna, rutrum vitae ultrices vitae, laoreet at libero. Donec a fermentum ante. Cras vel turpis non augue finibus tristique. Duis venenatis viverra sapien, vitae elementum tellus congue ut.
 
 ##### Subparagraphe
-Vestibulum vel sodales mi, eget posuere nisi. Suspendisse interdum lorem id laoreet ornare. Praesent nec dignissim eros, quis congue mauris. Nunc egestas lectus id tortor varius, vitae faucibus neque tempus. Ut commodo pellentesque turpis non viverra. Donec rutrum ante lorem, ut mollis diam vehicula eget. In consectetur non risus porta suscipit. Sed bibendum finibus porta. Nunc consequat convallis arcu at gravida. Etiam consectetur faucibus est, vitae aliquam odio vehicula sit amet. Mauris lacinia libero vitae orci aliquam vestibulum. Cras porttitor, est sed interdum semper, sapien nibh consequat libero, sed luctus turpis lorem et enim. Aliquam sollicitudin urna eget odio interdum, ut commodo metus luctus. Curabitur pulvinar risus leo, eu commodo mauris convallis at. Pellentesque sapien erat, finibus sit amet leo ac, rutrum rhoncus velit.
+Vestibulum vel sodales mi, eget posuere nisi. Suspendisse interdum lorem id laoreet ornare. Praesent nec dignissim eros, quis congue mauris. Nunc egestas lectus id tortor varius, vitae faucibus neque tempus. Ut commodo pellentesque turpis non viverra. Donec rutrum ante lorem, ut mollis diam vehicula eget. In consectetur non risus porta suscipit. Sed bibendum finibus porta. Nunc consequat convallis arcu at gravida. Etiam consectetur faucibus est, vitae aliquam odio vehicula sit amet. Mauris lacinia libero vitae orci aliquam vestibulum. Cras porttitor, est sed interdum semper, sapien nibh consequat libero, sed luctus turpis lorem et enim. Aliquam sollicitudin urna eget odio interdum, ut commodo metus luctus. Curabitur pulvinar risus leo, eu commodo mauris convallis at. Pellentesque sapien erat, finibus sit amet leo ac, rutrum rhoncus velit. -->
+
+
+
+
+
 
 
 
