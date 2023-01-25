@@ -10,7 +10,7 @@ contributes:
         - apa7.lua
     pdf:
       documentclass: apa7
-      include-in-header: header.tex
+      include-in-header: "partials/_two-column-longtable.tex"
       template-partials:
         - "partials/before-body.tex"
         - "partials/title.tex"

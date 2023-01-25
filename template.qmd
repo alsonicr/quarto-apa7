@@ -4,12 +4,12 @@ titleshort : Apa7 template
 fig-cap-location: top
 format:
   apa7-pdf:
+    latex-max-runs: 20
     keep-tex: true  
     classoption: jou # Or man for journals
   apa7-html: default
   apa7-docx:
     reference-doc: custom-reference-doc.docx
-    tbl-colwidths: [20, 20, 20]
     df-print: tibble
 author:
   - name:  John Junior Indeed
@@ -37,7 +37,30 @@ keywords: [template, demo]
 bibliography: bibliography.bib  
 ---
 
-# Introduction {#sec-intro}
+
+
+
+
+
+<!-- # Section 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. 
+
+## Subsection 
+Quisque suscipit id ante nec fringilla. Donec non laoreet nisl. Curabitur in laoreet massa, eget scelerisque augue. Phasellus in turpis quis sapien efficitur consectetur eget non mauris. Fusce aliquam fringilla ultrices. Praesent dictum posuere fermentum. Pellentesque tempor dapibus maximus. Fusce porttitor sagittis ligula, at consequat ex sagittis at. Aliquam ac finibus enim, sed fringilla sapien. Nunc rhoncus porta neque, non tempor leo facilisis ac. Phasellus id congue velit, sit amet ornare ligula. Cras lectus libero, fringilla ac justo a, condimentum efficitur est. Donec elementum semper quam sit amet ultrices. Nulla dapibus quam nibh, non sodales nisi finibus eu. Nullam sollicitudin nec ipsum in blandit. Quisque sem orci, pulvinar a faucibus et, dapibus eget turpis.
+
+### Subsubsection
+Donec iaculis nec dui ut malesuada. Maecenas sodales diam eros, quis faucibus augue mollis ac. Proin sit amet dapibus est. Vestibulum vitae mauris eu ipsum ornare imperdiet ut in augue. Aenean leo enim, vehicula posuere ante at, iaculis bibendum metus. Quisque non porttitor nisi, non egestas sapien. Donec posuere nulla sit amet eros convallis, non faucibus tellus vulputate. Duis non varius lacus. Ut interdum justo sit amet accumsan feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin non nunc varius, varius urna at, mattis elit. In nec volutpat ligula. Sed vehicula mauris vitae sem scelerisque, eget tempus justo tincidunt. Quisque eget sem a turpis dapibus bibendum.
+
+
+#### Paragraphe 
+Proin mi diam, pulvinar a mauris semper, semper interdum leo. Pellentesque sapien est, dapibus sed nunc sit amet, ullamcorper pretium lectus. Quisque quam quam, pretium eu luctus vitae, scelerisque et lectus. Suspendisse sodales lacinia purus bibendum consectetur. Mauris porttitor nec nulla vitae maximus. Praesent sit amet hendrerit magna. Aliquam malesuada diam eu nulla vulputate tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non odio sit amet orci varius vehicula. Cras eget sapien nisl. Curabitur commodo, dui eu rhoncus vestibulum, nunc tellus mollis velit, id pretium diam purus non magna. Cras sed sapien gravida, dictum neque ultrices, faucibus dui. Mauris leo magna, rutrum vitae ultrices vitae, laoreet at libero. Donec a fermentum ante. Cras vel turpis non augue finibus tristique. Duis venenatis viverra sapien, vitae elementum tellus congue ut.
+
+##### Subparagraphe
+Vestibulum vel sodales mi, eget posuere nisi. Suspendisse interdum lorem id laoreet ornare. Praesent nec dignissim eros, quis congue mauris. Nunc egestas lectus id tortor varius, vitae faucibus neque tempus. Ut commodo pellentesque turpis non viverra. Donec rutrum ante lorem, ut mollis diam vehicula eget. In consectetur non risus porta suscipit. Sed bibendum finibus porta. Nunc consequat convallis arcu at gravida. Etiam consectetur faucibus est, vitae aliquam odio vehicula sit amet. Mauris lacinia libero vitae orci aliquam vestibulum. Cras porttitor, est sed interdum semper, sapien nibh consequat libero, sed luctus turpis lorem et enim. Aliquam sollicitudin urna eget odio interdum, ut commodo metus luctus. Curabitur pulvinar risus leo, eu commodo mauris convallis at. Pellentesque sapien erat, finibus sit amet leo ac, rutrum rhoncus velit. -->
+
+
+
+# Introduction
 
 this template will provide a demonstration of the intergreted function. From it you can production a apa7 style document for manuscrit (pdf and word) or journal format (only pdf). To swich beteween those use the classoption with `jou` for journal or `man` for manuscript.  
 
@@ -56,19 +79,22 @@ this template will provide a demonstration of the intergreted function. From it 
 
 ## Tables
 
+<!-- see @tbl-tab1 -->
+
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
 | 12      | 12   |    12 |   12   |
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
+: Demo table 1 {#tbl-tab1}
 
 
 | Default | Left | Right | Center | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|---------|:-----|------:|:------:|
-| 12      | 12   |    12 |   12   |12      | 12   |    12 |   12   |
-| 123     | 123  |   123 |  123   |123     | 123  |   123 |  123   |
-| 1       | 1    |     1 |   1    |1       | 1    |     1 |   1    |
-
+| 12      | 12   |    12 |   12   |12       | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |123      | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |1        | 1    |     1 |   1    |
+: Demo table 2 long 
 
 ## Figures
 
@@ -76,10 +102,16 @@ Here is a kitten at @fig-fig1 (In manucrit pdf format picture will be at the end
 
 ![We all love kiteen i guess](kitten.jpg){#fig-fig1 height=25%}
 
-Here is a R :
-```{r, fig.cap="Plot \\label{fig:fig2}", message=FALSE, warning=FALSE, echo=FALSE}
+See plot in @fig-plot
+
+Here is a R plot in @fig-plot:
+```{r,  message=FALSE, warning=FALSE}
+#| label: fig-plot
+#| fig-cap: "Simple plot"
+
 library(ggplot2)
-ggplot(mtcars,aes(x=mpg,y=disp)) + geom_point() + geom_smooth()
+ggplot(mtcars,aes(x=mpg,y=disp)) + 
+  geom_point() + geom_smooth()
 
 ```
 
@@ -91,11 +123,11 @@ ggplot(mtcars,aes(x=mpg,y=disp)) + geom_point() + geom_smooth()
 
 ```{r}
 head(mtcars)
-
 ```
 
 
  
+
 # Section 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. 
 
@@ -111,4 +143,3 @@ Proin mi diam, pulvinar a mauris semper, semper interdum leo. Pellentesque sapie
 
 ##### Subparagraphe
 Vestibulum vel sodales mi, eget posuere nisi. Suspendisse interdum lorem id laoreet ornare. Praesent nec dignissim eros, quis congue mauris. Nunc egestas lectus id tortor varius, vitae faucibus neque tempus. Ut commodo pellentesque turpis non viverra. Donec rutrum ante lorem, ut mollis diam vehicula eget. In consectetur non risus porta suscipit. Sed bibendum finibus porta. Nunc consequat convallis arcu at gravida. Etiam consectetur faucibus est, vitae aliquam odio vehicula sit amet. Mauris lacinia libero vitae orci aliquam vestibulum. Cras porttitor, est sed interdum semper, sapien nibh consequat libero, sed luctus turpis lorem et enim. Aliquam sollicitudin urna eget odio interdum, ut commodo metus luctus. Curabitur pulvinar risus leo, eu commodo mauris convallis at. Pellentesque sapien erat, finibus sit amet leo ac, rutrum rhoncus velit.
-
