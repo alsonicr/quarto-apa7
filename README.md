@@ -1,6 +1,7 @@
 
 # Quarto APA7 template
 
+This is a quarto posit template for APA7 documentclass using American Psychology Associasion norms 7th. 
 ## Creating a New Article
 
 To create a new article using this format:
@@ -38,3 +39,8 @@ format:
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd).
 
+
+# Credit 
+
+`@dragon` for the lua solution for the author style
+ for the table solution in Journal option

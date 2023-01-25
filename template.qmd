@@ -2,14 +2,16 @@
 title: Quarto Template Apa7
 titleshort : Apa7 template
 format:
-  apa7-pdf:
-    keep-tex: true  
-    classoption: man # Or man for journals
-  apa7-html: default
+  # apa7-pdf:
+  #   keep-tex: true  
+  #   classoption: jou # Or man for journals
+  # apa7-html: default
+  apa7-docx:
+    reference-doc: custom-reference-doc.docx
 author:
-  - name: Sarah Malloc
+  - name:  John Junior Indeed
     affiliations:
-      - name: An Organization
+      - name: Its place is in a museum
 #         department: The Department
 #         address: 1 Main St
 #         city: Boston
@@ -17,61 +19,83 @@ author:
 #         postal-code: 02210-1022
 #       - A second affilication
 #     orcid: 0000-0000-0000-0000
-#     email: sm@example.org
+    email: sm@example.org
 #     url: https://example.org/
-  - name: Eliza Dealloc
+  - name: Maitre Bouc
     affiliations:
-      - Another Affiliation
+      - Biquette University
+  - name:  Nicolas Rochat
+    affiliations:
+      - name: Pseudoscience Everywhere University 
 abstract: |
-  This document is a template demonstrating the Apa7 format. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. Phasellus ante lectus, blandit id tincidunt sodales, gravida non elit. Fusce pellentesque dolor at nibh tempus sagittis. Nullam porta maximus orci quis scelerisque. Cras suscipit finibus diam a mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus eu porttitor urna, a finibus eros.
-
-  Mauris arcu purus, mattis vitae malesuada sit amet, rhoncus vel quam. Aliquam erat volutpat. Ut ut condimentum sem. Integer accumsan felis turpis, et venenatis elit euismod vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget arcu sed sem vestibulum fermentum ac in dolor. Aenean commodo vitae libero id feugiat. Mauris non ante sapien. Curabitur id scelerisque nisl, eu elementum tortor. Suspendisse vitae auctor enim. Donec mattis luctus lectus, ut tincidunt mi lacinia ullamcorper.
+  This document is a template demonstrating the Apa7 format. I try to include as much as necessary element to run a viable quarto document for both Latex PDF and word (yep some people still use word template). Take it has a demonstration.
 
 keywords: [template, demo]
 bibliography: bibliography.bib  
 ---
 
-## Introduction {#sec-intro}
+# Introduction {#sec-intro}
 
-*TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>.
+this template will provide a demonstration of the intergreted function. From it you can production a apa7 style document for manuscrit (pdf and word) or journal format (only pdf). To swich beteween those use the classoption with `jou` for journal or `man` for manuscript.  
+
+## Working function 
+  - Journal and Manuscript format (*classoption* jou or man)
+  - Authoring
+  - affiliations (`partially`, share affiliations are not handle perfectly)
+  - Table in the journal template (*optionclass*: **jou**) are not working perfectly, the default table in quarto is the longtable package, but it doesn't work on two columns format.(`partialy`)
+
+## Not working 
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. Phasellus ante lectus, blandit id tincidunt sodales, gravida non elit. Fusce pellentesque dolor at nibh tempus sagittis. Nullam porta maximus orci quis scelerisque. Cras suscipit finibus diam a mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus eu porttitor urna, a finibus eros.
 
-Mauris arcu purus, mattis vitae malesuada sit amet, rhoncus vel quam. Aliquam erat volutpat. Ut ut condimentum sem. Integer accumsan felis turpis, et venenatis elit euismod vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget arcu sed sem vestibulum fermentum ac in dolor. Aenean commodo vitae libero id feugiat. Mauris non ante sapien. Curabitur id scelerisque nisl, eu elementum tortor. Suspendisse vitae auctor enim. Donec mattis luctus lectus, ut tincidunt mi lacinia ullamcorper.
+# Working examples: 
 
-Cras ac fringilla felis. Pellentesque et sem ullamcorper, faucibus erat a, lacinia magna. Fusce risus nulla, tincidunt sed justo at, mollis efficitur lectus. Aliquam sit amet mauris in nunc volutpat sodales eu in velit. Fusce in enim ac sapien viverra finibus sit amet quis nisi. Vivamus maximus, magna ac ultrices mollis, nunc quam scelerisque massa, at porttitor velit quam eu metus. Sed euismod lacus sed ligula aliquam vehicula. Nunc dictum pharetra elit, a vestibulum ex ornare vel. Etiam vitae quam rutrum, feugiat neque at, placerat est. Sed semper massa suscipit, aliquam ante id, tempus metus. In hac habitasse platea dictumst. Mauris vel convallis mi, nec molestie ligula. Nulla convallis, lectus et porttitor sollicitudin, lorem risus egestas sem, vel rutrum enim ante nec lectus.
 
+## Tables
+
+
+
+
+
+## Figures
+
+Here is a kitten at @fig-fig1 (In manucrit pdf format picture will be at the end a the pdf)
+
+![We all love kiteen i guess](kitten.jpg){#fig-fig1 height=25%}
+
+Here is a R :
+```{r, fig.cap="Plot \\label{fig:fig2}", message=FALSE, warning=FALSE, echo=FALSE}
+library(ggplot2)
+ggplot(mtcars,aes(x=mpg,y=disp)) + geom_point() + geom_smooth()
+
+```
+
+## Code example 
+
+```{r}
+1+1
+```
+
+```{r}
+head(mtcars)
+
+```
+
+
+ 
+# Section 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor placerat tellus, nec congue nisi euismod sit amet. Nam laoreet vitae nisl non varius. 
+
+## Subsection 
 Quisque suscipit id ante nec fringilla. Donec non laoreet nisl. Curabitur in laoreet massa, eget scelerisque augue. Phasellus in turpis quis sapien efficitur consectetur eget non mauris. Fusce aliquam fringilla ultrices. Praesent dictum posuere fermentum. Pellentesque tempor dapibus maximus. Fusce porttitor sagittis ligula, at consequat ex sagittis at. Aliquam ac finibus enim, sed fringilla sapien. Nunc rhoncus porta neque, non tempor leo facilisis ac. Phasellus id congue velit, sit amet ornare ligula. Cras lectus libero, fringilla ac justo a, condimentum efficitur est. Donec elementum semper quam sit amet ultrices. Nulla dapibus quam nibh, non sodales nisi finibus eu. Nullam sollicitudin nec ipsum in blandit. Quisque sem orci, pulvinar a faucibus et, dapibus eget turpis.
 
-Praesent euismod ultrices eleifend. Nullam sit amet sollicitudin elit. Morbi viverra lorem ipsum, ut eleifend ex elementum in. Sed dictum, dolor ut auctor gravida, libero diam pharetra urna, eget vehicula justo magna tincidunt tortor. Sed tortor ex, eleifend ac tincidunt dignissim, tincidunt scelerisque tellus. Quisque ultrices augue non risus sagittis, at dictum velit ultrices. Maecenas vel mollis turpis. In a erat pulvinar, varius risus ut, auctor felis. Pellentesque malesuada augue in lectus vulputate ornare et non dui. Fusce dictum cursus efficitur. Sed mollis semper nunc. Duis et aliquet enim. Nullam ultricies luctus nisi, a rutrum turpis rhoncus aliquet.
-
+### Subsubsection
 Donec iaculis nec dui ut malesuada. Maecenas sodales diam eros, quis faucibus augue mollis ac. Proin sit amet dapibus est. Vestibulum vitae mauris eu ipsum ornare imperdiet ut in augue. Aenean leo enim, vehicula posuere ante at, iaculis bibendum metus. Quisque non porttitor nisi, non egestas sapien. Donec posuere nulla sit amet eros convallis, non faucibus tellus vulputate. Duis non varius lacus. Ut interdum justo sit amet accumsan feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin non nunc varius, varius urna at, mattis elit. In nec volutpat ligula. Sed vehicula mauris vitae sem scelerisque, eget tempus justo tincidunt. Quisque eget sem a turpis dapibus bibendum.
 
+
+#### Paragraphe 
 Proin mi diam, pulvinar a mauris semper, semper interdum leo. Pellentesque sapien est, dapibus sed nunc sit amet, ullamcorper pretium lectus. Quisque quam quam, pretium eu luctus vitae, scelerisque et lectus. Suspendisse sodales lacinia purus bibendum consectetur. Mauris porttitor nec nulla vitae maximus. Praesent sit amet hendrerit magna. Aliquam malesuada diam eu nulla vulputate tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non odio sit amet orci varius vehicula. Cras eget sapien nisl. Curabitur commodo, dui eu rhoncus vestibulum, nunc tellus mollis velit, id pretium diam purus non magna. Cras sed sapien gravida, dictum neque ultrices, faucibus dui. Mauris leo magna, rutrum vitae ultrices vitae, laoreet at libero. Donec a fermentum ante. Cras vel turpis non augue finibus tristique. Duis venenatis viverra sapien, vitae elementum tellus congue ut.
 
-Nullam sed eros elit. Aliquam leo magna, condimentum vestibulum erat at, eleifend pulvinar orci. Morbi in neque neque. Mauris blandit id dolor sed porttitor. Nam luctus libero et ullamcorper mollis. Donec sed arcu lorem. Sed eleifend id leo at eleifend. Suspendisse porta quam quis magna congue pharetra. Vivamus sagittis massa ut lorem maximus, et sollicitudin tortor volutpat. Proin id est vel enim luctus venenatis ac ac neque. Maecenas lobortis porta nulla a ultricies. Aenean facilisis erat nibh, eget lacinia lacus posuere eget. Aliquam scelerisque dolor quam, ut euismod nibh consectetur ac. Suspendisse sit amet pellentesque massa.
-
-Nam iaculis massa ac felis lacinia aliquam. Ut sagittis felis ut lacinia vestibulum. Cras sit amet ipsum augue. Nullam gravida ac nulla in dignissim. Pellentesque venenatis orci consectetur aliquet mattis. Maecenas at ligula quis est sodales imperdiet. Suspendisse id felis placerat, ornare dolor in, vehicula odio. Duis nec ipsum et est bibendum elementum ac et augue. Cras pellentesque venenatis diam, eu sodales diam viverra a. Etiam nisl arcu, laoreet non nulla ut, bibendum scelerisque dolor. Suspendisse id accumsan nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vitae enim sit amet dolor placerat volutpat.
-
-Duis et eros eget purus lobortis sagittis eget eget massa. Sed sagittis rutrum arcu quis tempus. Vivamus ut faucibus ligula, non mollis lectus. Cras cursus eget purus eget dictum. Nullam vulputate ligula quis risus venenatis malesuada. Nam mattis condimentum scelerisque. Nunc dictum, arcu a efficitur mattis, orci nulla tincidunt magna, dignissim ullamcorper neque dolor ut felis. Fusce ornare commodo vestibulum. Duis ultrices maximus justo. Phasellus vehicula ipsum sed tellus viverra congue. Donec pretium purus at rutrum ultricies. Nulla sit amet vulputate urna. Vivamus laoreet enim varius congue fermentum.
-
-Quisque turpis ligula, hendrerit ut auctor ac, molestie id tortor. Proin maximus enim vel nulla tincidunt porta. Vivamus laoreet ligula sed congue convallis. Integer orci purus, gravida non leo sit amet, pharetra iaculis diam. Etiam placerat libero at libero blandit viverra. In quam dolor, sollicitudin id placerat at, egestas eu magna. Morbi porttitor, ex nec pretium accumsan, sapien sem tempor lectus, ut vehicula massa urna quis magna. In interdum nisl id rhoncus lacinia. Nunc accumsan maximus lectus, sit amet dictum eros laoreet at.
-
+##### Subparagraphe
 Vestibulum vel sodales mi, eget posuere nisi. Suspendisse interdum lorem id laoreet ornare. Praesent nec dignissim eros, quis congue mauris. Nunc egestas lectus id tortor varius, vitae faucibus neque tempus. Ut commodo pellentesque turpis non viverra. Donec rutrum ante lorem, ut mollis diam vehicula eget. In consectetur non risus porta suscipit. Sed bibendum finibus porta. Nunc consequat convallis arcu at gravida. Etiam consectetur faucibus est, vitae aliquam odio vehicula sit amet. Mauris lacinia libero vitae orci aliquam vestibulum. Cras porttitor, est sed interdum semper, sapien nibh consequat libero, sed luctus turpis lorem et enim. Aliquam sollicitudin urna eget odio interdum, ut commodo metus luctus. Curabitur pulvinar risus leo, eu commodo mauris convallis at. Pellentesque sapien erat, finibus sit amet leo ac, rutrum rhoncus velit.
 
-Maecenas blandit velit lobortis, dictum nibh eu, eleifend ligula. Proin in nunc vel nunc suscipit ultricies non vitae purus. Duis vestibulum justo et tempor aliquam. Nam interdum lorem ornare, volutpat mauris id, ultricies nulla. Mauris sit amet sapien turpis. Sed egestas est id ullamcorper finibus. Phasellus et lectus id nisl tristique finibus vitae a nulla. Nunc auctor sagittis urna eu luctus.
-
-Nullam nisi urna, pretium eu porttitor non, fringilla eu nunc. Quisque faucibus erat ut aliquam vulputate. Vestibulum ac tristique orci. Suspendisse cursus iaculis metus, non varius neque fringilla eget. Nam ut vestibulum tellus. Integer mollis ex quis purus molestie laoreet. Curabitur pellentesque mattis ultricies. Fusce sed ornare diam. Nunc dignissim ac urna in accumsan. Donec in enim vel massa faucibus commodo.
-
-Sed pretium tortor nec nunc vehicula, eu accumsan ante egestas. Mauris egestas pulvinar convallis. Fusce pellentesque, quam nec efficitur consectetur, nulla nibh efficitur odio, quis varius est sem in neque. Donec aliquam, quam in vulputate maximus, quam nunc congue eros, sit amet varius ligula lorem eu nisi. Aenean luctus dui quis tortor volutpat sodales. Suspendisse lacus mauris, convallis at tempus quis, ullamcorper et nisi. Ut nec maximus tortor, convallis lacinia nisi. Aliquam pellentesque vestibulum dolor sit amet blandit. Phasellus imperdiet tincidunt elit sed molestie. Sed in enim non ex suscipit ultrices non quis tortor. Nunc varius dapibus leo, gravida bibendum massa auctor vel. Sed nec consectetur justo, in pulvinar mi. Praesent ac hendrerit urna. Donec malesuada urna ac varius mollis. Aliquam nunc risus, rhoncus quis blandit nec, ornare ut augue. Donec posuere purus justo, a vulputate justo molestie in.
-
-Fusce vel odio sem. Etiam commodo nulla non vehicula gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur feugiat porta nunc, vitae porttitor enim fringilla vitae. Duis elit est, vehicula id sapien ac, pharetra pulvinar sem. Ut nisl mauris, rhoncus in sodales sed, blandit et justo. Quisque tempor laoreet dolor, a viverra lacus feugiat sed. Donec eget posuere enim, a consequat magna. Cras eget scelerisque purus. Ut consectetur tortor erat, nec bibendum odio facilisis eget. Donec eget lorem et lacus sollicitudin hendrerit vitae aliquam mi. Donec laoreet sem nulla, nec aliquam augue efficitur ac. Suspendisse felis quam, consequat id pretium a, rhoncus ac velit. Nullam vestibulum ipsum ac nisl eleifend lobortis. Quisque pharetra diam at eleifend tincidunt. Morbi viverra fermentum scelerisque.
-
-Mauris bibendum ex ac arcu scelerisque pulvinar. Mauris eleifend purus metus, ac dapibus diam dapibus et. Curabitur sit amet mattis mauris, ac congue lorem. Etiam hendrerit odio sed lacinia fringilla. Integer ut nisi imperdiet, semper ipsum et, luctus eros. Aliquam massa mi, sagittis in consectetur vitae, luctus in nibh. Nunc in risus rhoncus velit blandit eleifend ut ac nisl. Praesent eu urna nec nibh tristique lacinia ac eget neque. Duis varius mollis velit. Aliquam congue neque massa, in porttitor massa tincidunt a.
-
-Nulla mi lorem, maximus at scelerisque vel, eleifend ac sem. Integer eu dolor nec massa porta tempor eget quis orci. Vestibulum nec metus eros. Nulla quis ligula lorem. Vestibulum vitae eleifend metus, vitae posuere elit. Cras dapibus dapibus hendrerit. Nam in rhoncus purus.
-
-Suspendisse hendrerit diam orci, a pulvinar nisi ornare ut. Pellentesque vel posuere mi. Pellentesque faucibus, sapien vitae scelerisque scelerisque, risus mi consequat magna, non scelerisque tellus sapien eget massa. Aenean vulputate interdum vehicula. Fusce pellentesque ut lacus id aliquet. Vivamus metus dolor, auctor aliquet sodales sit amet, luctus tempor diam. Nam eu tortor nec leo accumsan sollicitudin. Nunc nec sem sollicitudin, venenatis orci eget, interdum nisl. Morbi blandit, augue eget vulputate volutpat, nibh justo pretium eros, quis dapibus diam elit at ante. Integer ac gravida massa, et mollis eros.
-
-Mauris tincidunt massa ultricies ipsum pellentesque pretium. Mauris nulla ante, vulputate sed augue interdum, volutpat aliquet velit. Sed at imperdiet justo, vel accumsan nunc. Donec iaculis eleifend odio et rutrum. Vivamus quis massa nec mi ultricies euismod ut vel urna. Nam vestibulum, sapien ut porttitor interdum, sem massa laoreet lacus, eget vulputate tortor sapien in odio. Praesent eu erat mauris. Nullam viverra nec turpis eget accumsan. Nam finibus sapien vel congue ullamcorper.
