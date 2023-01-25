@@ -9,3 +9,7 @@ template_files
 /.luarc.json
 pdflatex*
 template.syntex(busy)
+template.fdb_latexmk
+tmp1.tmp
+tmp*
+template.fff
