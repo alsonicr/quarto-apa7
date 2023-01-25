@@ -7,7 +7,7 @@ format:
     latex-max-runs: 20
     keep-tex: true  
     classoption: jou # Or man for journals
-    toc: true
+    toc: false
   apa7-html: default
   # apa7-docx:
   #   reference-doc: custom-reference-doc.docx
