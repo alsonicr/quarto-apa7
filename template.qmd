@@ -1,13 +1,16 @@
 ---
 title: Quarto Template Apa7
 titleshort : Apa7 template
+fig-cap-location: top
 format:
-  # apa7-pdf:
-  #   keep-tex: true  
-  #   classoption: jou # Or man for journals
-  # apa7-html: default
+  apa7-pdf:
+    keep-tex: true  
+    classoption: jou # Or man for journals
+  apa7-html: default
   apa7-docx:
     reference-doc: custom-reference-doc.docx
+    tbl-colwidths: [20, 20, 20]
+    df-print: tibble
 author:
   - name:  John Junior Indeed
     affiliations:
@@ -53,8 +56,18 @@ this template will provide a demonstration of the intergreted function. From it 
 
 ## Tables
 
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
 
 
+| Default | Left | Right | Center | Default | Left | Right | Center |
+|---------|:-----|------:|:------:|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |1       | 1    |     1 |   1    |
 
 
 ## Figures
